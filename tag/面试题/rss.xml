@@ -5,8 +5,8 @@
         <link>https://blog.lovetianci.cn</link>
         <description>一身清贫怎敢入繁华&lt;br&gt;两袖清风岂能误佳人</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 06 Mar 2020 13:14:20 +0800</pubDate>
-        <lastBuildDate>Fri, 06 Mar 2020 13:14:20 +0800</lastBuildDate>
+        <pubDate>Fri, 06 Mar 2020 13:14:20 +0000</pubDate>
+        <lastBuildDate>Fri, 06 Mar 2020 13:14:20 +0000</lastBuildDate>
         <category>技术</category>
         <category>面试题</category>
         <category>娱乐</category>
@@ -15,7 +15,7 @@
             <title>C#理论面试题</title>
             <link>https://blog.lovetianci.cn/DotNET/CSharp_Interview_ques_2/</link>
             <category>面试题</category>
-            <pubDate>Fri, 06 Mar 2020 13:14:20 +0800</pubDate>
+            <pubDate>Fri, 06 Mar 2020 13:14:20 +0000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;这次的面试题大多为理论知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#这次的面试题大多为理论知识&#34;&gt;#&lt;/a&gt; 这次的面试题大多为理论知识&lt;/h2&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h2 id=&#34;1-数组有没有length方法string有没有length方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-数组有没有length方法string有没有length方法&#34;&gt;#&lt;/a&gt; 1. 数组有没有 length () 方法，String 有没有 length () 方法？&lt;/h2&gt;
@@ -63,7 +63,7 @@ StringBuffer的执行速度要大于String
             <title>C#简单面试题</title>
             <link>https://blog.lovetianci.cn/DotNET/CSharp_Interview_ques_1/</link>
             <category>面试题</category>
-            <pubDate>Tue, 03 Mar 2020 10:20:30 +0800</pubDate>
+            <pubDate>Tue, 03 Mar 2020 10:20:30 +0000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;记录一下遇到过的面试题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#记录一下遇到过的面试题&#34;&gt;#&lt;/a&gt; 记录一下遇到过的面试题&lt;/h2&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;p&gt;&lt;img data-src=&#34;low.png&#34; alt=&#34;我怎么这么垃圾，我要有技术会是这鬼样？&#34;&gt;&lt;/p&gt;

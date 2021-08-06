@@ -5,8 +5,8 @@
         <link>https://blog.lovetianci.cn</link>
         <description>一身清贫怎敢入繁华&lt;br&gt;两袖清风岂能误佳人</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 13 Jan 2020 20:00:00 +0800</pubDate>
-        <lastBuildDate>Mon, 13 Jan 2020 20:00:00 +0800</lastBuildDate>
+        <pubDate>Mon, 13 Jan 2020 20:00:00 +0000</pubDate>
+        <lastBuildDate>Mon, 13 Jan 2020 20:00:00 +0000</lastBuildDate>
         <category>技术</category>
         <category>面试题</category>
         <category>娱乐</category>
@@ -15,7 +15,7 @@
             <title>Hexo文件操作</title>
             <link>https://blog.lovetianci.cn/Hexo/Hexo_Command/</link>
             <category>技术</category>
-            <pubDate>Mon, 13 Jan 2020 20:00:00 +0800</pubDate>
+            <pubDate>Mon, 13 Jan 2020 20:00:00 +0000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;搭建hexo静态博客难免会遇到小问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搭建hexo静态博客难免会遇到小问题&#34;&gt;#&lt;/a&gt; 搭建 Hexo 静态博客难免会遇到小问题&lt;/h2&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h3 id=&#34;今天讲一下遇到的一些小坑以及解决办法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#今天讲一下遇到的一些小坑以及解决办法&#34;&gt;#&lt;/a&gt; 今天讲一下遇到的一些小坑，以及解决办法&lt;/h3&gt;
@@ -41,7 +41,7 @@
             <title>Hexo安装与部署</title>
             <link>https://blog.lovetianci.cn/Hexo/Hexo_Setup/</link>
             <category>技术</category>
-            <pubDate>Sun, 12 Jan 2020 12:00:00 +0800</pubDate>
+            <pubDate>Sun, 12 Jan 2020 12:00:00 +0000</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;打开git-bash输入以下代码安装hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打开git-bash输入以下代码安装hexo&#34;&gt;#&lt;/a&gt; 打开 Git Bash，输入以下代码安装 hexo&lt;/h2&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ &lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; -g hexo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;安装完成在任意盘创建文件夹例如dhexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装完成在任意盘创建文件夹例如dhexo&#34;&gt;#&lt;/a&gt; 安装完成在任意盘创建文件夹，例如 D:\hexo&lt;/h3&gt;

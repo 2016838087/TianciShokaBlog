@@ -27,12 +27,12 @@
   <meta name="keywords" content="技术" />
 
 
-<link rel="canonical" href="https://blog.lovetianci.cn/SQL/MySQL_MSSQL_Stored_Procedure/">
+<link rel="canonical" href="https://blog.lovetianci.cn/Other/ML.NET/">
 
 
 
   <title>
-MySQL和SQL Server存储过程 - SQL |
+初识ML.NET - Other |
 </title>
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,23 +60,23 @@ MySQL和SQL Server存储过程 - SQL |
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">MySQL和SQL Server存储过程
+  <h1 itemprop="name headline">初识ML.NET
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2020-05-11 17:40:00">
+  <span class="item" title="创建时间：2021-08-11 15:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2020-05-11T17:40:00+00:00">2020-05-11</time>
+    <time itemprop="dateCreated datePublished" datetime="2021-08-11T15:00:00+00:00">2021-08-11</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>311</span>
+    <span>585</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ MySQL和SQL Server存储过程 - SQL |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
           <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
         </ul>
       </div>
     </header>
@@ -148,12 +148,12 @@ MySQL和SQL Server存储过程 - SQL |
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/SQL/" itemprop="item" rel="index" title="分类于 SQL"><span itemprop="name">SQL</span></a>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Other/" itemprop="item" rel="index" title="分类于 Other"><span itemprop="name">Other</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://blog.lovetianci.cn/SQL/MySQL_MSSQL_Stored_Procedure/">
+  <link itemprop="mainEntityOfPage" href="https://blog.lovetianci.cn/Other/ML.NET/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/tianci.jpg">
@@ -168,15 +168,39 @@ MySQL和SQL Server存储过程 - SQL |
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="记录一下数据库存储过程"><a class="markdownIt-Anchor" href="#记录一下数据库存储过程">#</a> 记录一下数据库存储过程</h1>
+    <h3 id="什么是mlnet"><a class="markdownIt-Anchor" href="#什么是mlnet">#</a> <span class="exturl" data-url="aHR0cDovL3huLS1NTC0wMDJjbHN0MThnLk5FVA==">什么是 ML.NET</span>，官方文档给出解释如下</h3>
 <a id="more"></a>
-<h3 id="mysql创建带条件查询的存储过程"><a class="markdownIt-Anchor" href="#mysql创建带条件查询的存储过程">#</a> MySQL 创建带条件查询的存储过程</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>DELIMITER <span class="token variable">$$</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>CREATE</pre></td></tr><tr><td data-num="4"></td><td><pre>    PROCEDURE <span class="token variable"><span class="token variable">`</span>数据库名<span class="token variable">`</span></span><span class="token builtin class-name">.</span><span class="token variable"><span class="token variable">`</span>存储过程名<span class="token variable">`</span></span><span class="token punctuation">(</span>IN 自定义参数 VARCHAR<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">))</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    BEGIN</pre></td></tr><tr><td data-num="6"></td><td><pre>	SELECT * FROM 表名 WHERE 字段 <span class="token operator">=</span> 自定义参数<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    END<span class="token variable">$$</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>DELIMITER <span class="token punctuation">;</span></pre></td></tr></table></figure><h3 id="调用并传参"><a class="markdownIt-Anchor" href="#调用并传参">#</a> 调用并传参</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>CALL 存储过程名<span class="token punctuation">(</span><span class="token string">'参数值'</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h3 id="删除存储过程"><a class="markdownIt-Anchor" href="#删除存储过程">#</a> 删除存储过程</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>DROP PROCEDURE 存储过程名</pre></td></tr></table></figure><h3 id="sql-server创建带条件查询的存储过程"><a class="markdownIt-Anchor" href="#sql-server创建带条件查询的存储过程">#</a> SQL Server 创建带条件查询的存储过程</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>create proc 存储过程名</pre></td></tr><tr><td data-num="2"></td><td><pre>@自定义参数 varchar<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>as </pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">select</span> * from 表名 where 字段<span class="token operator">=</span>@自定义参数</pre></td></tr><tr><td data-num="5"></td><td><pre>go</pre></td></tr></table></figure><h3 id="调用并传参-2"><a class="markdownIt-Anchor" href="#调用并传参-2">#</a> 调用并传参</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>EXEC 存储过程名 <span class="token string">'参数值'</span></pre></td></tr></table></figure><h3 id="删除存储过程-2"><a class="markdownIt-Anchor" href="#删除存储过程-2">#</a> 删除存储过程</h3>
-<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>drop proc 存储过程名</pre></td></tr></table></figure>
+<ol>
+<li>
+<p><span class="exturl" data-url="aHR0cDovL01MLk5FVA==">ML.NET</span> 使你能够在联机或脱机场景中将机器学习添加到 .NET 应用程序中。 借助此功能，可以使用应用程序的可用数据进行自动预测。 机器学习应用程序利用数据中的模式来进行预测，而不需要进行显式编程。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cDovL01MLk5FVA==">ML.NET</span> 的核心是机器学习模型 。 该模型指定将输入数据转换为预测所需的步骤。 借助 <span class="exturl" data-url="aHR0cDovL01MLk5FVA==">ML.NET</span>，可以通过指定算法来训练自定义模型，也可以导入预训练的 TensorFlow 和 ONNX 模型。</p>
+</li>
+<li>
+<p>拥有模型后，可以将其添加到应用程序中进行预测。</p>
+</li>
+</ol>
+<h3 id="意思就是可以脱机训练模型让程序拥有自主判断意识"><a class="markdownIt-Anchor" href="#意思就是可以脱机训练模型让程序拥有自主判断意识">#</a> 意思就是可以脱机训练模型，让程序拥有自主判断意识</h3>
+<h3 id="第一步创建一个机器学习模型在一个新项目中右击添加机器学习"><a class="markdownIt-Anchor" href="#第一步创建一个机器学习模型在一个新项目中右击添加机器学习">#</a> 第一步创建一个机器学习模型，在一个新项目中右击添加机器学习</h3>
+<p><img data-src="create.png" alt="添加机器学习"></p>
+<h3 id="选择一个方案这边选择图像分类"><a class="markdownIt-Anchor" href="#选择一个方案这边选择图像分类">#</a> 选择一个方案，这边选择图像分类</h3>
+<p><img data-src="programme.png" alt="选择方案"></p>
+<h3 id="选择环境因为没有azure上的数据所以选择本地文件夹"><a class="markdownIt-Anchor" href="#选择环境因为没有azure上的数据所以选择本地文件夹">#</a> 选择环境，因为没有 Azure 上的数据所以选择本地文件夹</h3>
+<p><img data-src="environment.png" alt="选择环境"></p>
+<h3 id="这边选择的图片有点多分为四个类型"><a class="markdownIt-Anchor" href="#这边选择的图片有点多分为四个类型">#</a> 这边选择的图片有点多，分为四个类型</h3>
+<p><img data-src="data.png" alt="选择数据"></p>
+<h3 id="点击训练如果图片太多训练时间也会变长这边已经训练好了"><a class="markdownIt-Anchor" href="#点击训练如果图片太多训练时间也会变长这边已经训练好了">#</a> 点击训练，如果图片太多训练时间也会变长，这边已经训练好了</h3>
+<p><img data-src="train.png" alt="开始训练模型"></p>
+<h3 id="训练完成可以选择一张本地图片来进行分析"><a class="markdownIt-Anchor" href="#训练完成可以选择一张本地图片来进行分析">#</a> 训练完成可以选择一张本地图片来进行分析</h3>
+<p><img data-src="assessment.png" alt="分析图片"></p>
+<h3 id="最后可以将代码添加到本地查看运行逻辑以及生成的文件"><a class="markdownIt-Anchor" href="#最后可以将代码添加到本地查看运行逻辑以及生成的文件">#</a> 最后可以将代码添加到本地，查看运行逻辑以及生成的文件</h3>
+<p><img data-src="code.png" alt="添加代码"></p>
+<h3 id="打开consoleappprogramcs文件修改"><a class="markdownIt-Anchor" href="#打开consoleappprogramcs文件修改">#</a> 打开 ConsoleApp.Program.cs 文件修改</h3>
+<figure class="highlight csharp"><figcaption data-lang="C#"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token class-name">ModelInput</span> sampleData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ModelInput</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  ImageSource <span class="token operator">=</span> <span class="token string">"可填本地任意图片路径"</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr></table></figure><h3 id="我这边下载了很多图片进行循环分析"><a class="markdownIt-Anchor" href="#我这边下载了很多图片进行循环分析">#</a> 我这边下载了很多图片进行循环分析</h3>
+<p><img data-src="console.png" alt="输出结果"></p>
+<h3 id="最后一共五十张图片误判11张想要识别更加精确就得添加更多图片识别更多细节进行分析"><a class="markdownIt-Anchor" href="#最后一共五十张图片误判11张想要识别更加精确就得添加更多图片识别更多细节进行分析">#</a> 最后一共五十张图片，误判 11 张，想要识别更加精确就得添加更多图片识别更多细节进行分析</h3>
+
       <div class="tags">
           <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"><i class="ic i-tag"></i> 技术</a>
       </div>
@@ -221,7 +245,7 @@ MySQL和SQL Server存储过程 - SQL |
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://blog.lovetianci.cn/SQL/MySQL_MSSQL_Stored_Procedure/" title="MySQL和SQL Server存储过程">https://blog.lovetianci.cn/SQL/MySQL_MSSQL_Stored_Procedure/</a>
+    <a href="https://blog.lovetianci.cn/Other/ML.NET/" title="初识ML.NET">https://blog.lovetianci.cn/Other/ML.NET/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -240,22 +264,14 @@ MySQL和SQL Server存储过程 - SQL |
     <div class="item left">
       
 
-  <a href="/Vue/Vue_Learning_2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="vue+elementui遇到的坑">
+  <a href="/Other/Hexo_Appveyor/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="Appveyor持续集成Hexo">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> Vue</span>
-  <h3>vue+elementui遇到的坑</h3>
+  <span class="category"><i class="ic i-flag"></i> Other</span>
+  <h3>Appveyor持续集成Hexo</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/DotNET/DotNETCore_IIS/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitspjpbj20zk0m81ky.jpg" title=".NET Core 部署IIS">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> DotNET</span>
-  <h3>.NET Core 部署IIS</h3>
-  </a>
-
     </div>
 </div>
 
@@ -271,11 +287,11 @@ MySQL和SQL Server存储过程 - SQL |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#记录一下数据库存储过程"><span class="toc-number">1.</span> <span class="toc-text"># 记录一下数据库存储过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql创建带条件查询的存储过程"><span class="toc-number">1.0.1.</span> <span class="toc-text"># MySQL 创建带条件查询的存储过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调用并传参"><span class="toc-number">1.0.2.</span> <span class="toc-text"># 调用并传参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除存储过程"><span class="toc-number">1.0.3.</span> <span class="toc-text"># 删除存储过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql-server创建带条件查询的存储过程"><span class="toc-number">1.0.4.</span> <span class="toc-text"># SQL Server 创建带条件查询的存储过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调用并传参-2"><span class="toc-number">1.0.5.</span> <span class="toc-text"># 调用并传参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除存储过程-2"><span class="toc-number">1.0.6.</span> <span class="toc-text"># 删除存储过程</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是mlnet"><span class="toc-number">1.</span> <span class="toc-text"># 什么是 ML.NET，官方文档给出解释如下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#意思就是可以脱机训练模型让程序拥有自主判断意识"><span class="toc-number">2.</span> <span class="toc-text"># 意思就是可以脱机训练模型，让程序拥有自主判断意识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步创建一个机器学习模型在一个新项目中右击添加机器学习"><span class="toc-number">3.</span> <span class="toc-text"># 第一步创建一个机器学习模型，在一个新项目中右击添加机器学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择一个方案这边选择图像分类"><span class="toc-number">4.</span> <span class="toc-text"># 选择一个方案，这边选择图像分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择环境因为没有azure上的数据所以选择本地文件夹"><span class="toc-number">5.</span> <span class="toc-text"># 选择环境，因为没有 Azure 上的数据所以选择本地文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这边选择的图片有点多分为四个类型"><span class="toc-number">6.</span> <span class="toc-text"># 这边选择的图片有点多，分为四个类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点击训练如果图片太多训练时间也会变长这边已经训练好了"><span class="toc-number">7.</span> <span class="toc-text"># 点击训练，如果图片太多训练时间也会变长，这边已经训练好了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#训练完成可以选择一张本地图片来进行分析"><span class="toc-number">8.</span> <span class="toc-text"># 训练完成可以选择一张本地图片来进行分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后可以将代码添加到本地查看运行逻辑以及生成的文件"><span class="toc-number">9.</span> <span class="toc-text"># 最后可以将代码添加到本地，查看运行逻辑以及生成的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开consoleappprogramcs文件修改"><span class="toc-number">10.</span> <span class="toc-text"># 打开 ConsoleApp.Program.cs 文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#我这边下载了很多图片进行循环分析"><span class="toc-number">11.</span> <span class="toc-text"># 我这边下载了很多图片进行循环分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后一共五十张图片误判11张想要识别更加精确就得添加更多图片识别更多细节进行分析"><span class="toc-number">12.</span> <span class="toc-text"># 最后一共五十张图片，误判 11 张，想要识别更加精确就得添加更多图片识别更多细节进行分析</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/SQL/MySQL_MVC5_EF6/" rel="bookmark" title="MVC连接MySQL教程">MVC连接MySQL教程</a></li><li class="active"><a href="/SQL/MySQL_MSSQL_Stored_Procedure/" rel="bookmark" title="MySQL和SQL Server存储过程">MySQL和SQL Server存储过程</a></li>
+          <li><a href="/Other/MyFirstBlog/" rel="bookmark" title="博客正式上线">博客正式上线</a></li><li><a href="/Other/UpdateInfo/" rel="bookmark" title="版本更新">版本更新</a></li><li><a href="/Other/GitLab_Windows10/" rel="bookmark" title="Windows服务器搭建私人GitLab">Windows服务器搭建私人GitLab</a></li><li><a href="/Other/Hexo_Appveyor/" rel="bookmark" title="Appveyor持续集成Hexo">Appveyor持续集成Hexo</a></li><li class="active"><a href="/Other/ML.NET/" rel="bookmark" title="初识ML.NET">初识ML.NET</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -353,12 +369,10 @@ MySQL和SQL Server存储过程 - SQL |
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/Vue/Vue_Learning_2/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/DotNET/DotNETCore_IIS/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -407,7 +421,7 @@ MySQL和SQL Server存储过程 - SQL |
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'SQL/MySQL_MSSQL_Stored_Procedure/',
+    path: 'Other/ML.NET/',
     favicon: {
       show: "（●´3｀●）过来抱紧我！",
       hide: "(´Д｀)不要离开我！"

@@ -2931,17 +2931,17 @@ main >.inner {
   top: -10%;
   left: -10%;
 }
-.social .item.g::before {
-  background-color: thu;
+.social .item.qq::before {
+  background-color: #55acd5;
 }
-.social .item.g i {
-  color: thu;
+.social .item.qq i {
+  color: #55acd5;
 }
-.social .item.h::before {
-  background-color: #191717;
+.social .item.wechat::before {
+  background-color: #ea716e;
 }
-.social .item.h i {
-  color: #191717;
+.social .item.wechat i {
+  color: #ea716e;
 }
 .social .item:focus i,
 .social .item:hover i {

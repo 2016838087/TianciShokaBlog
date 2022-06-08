@@ -85,29 +85,17 @@
         <content type="html">&lt;h2 id=&#34;首先安装nodejs环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#首先安装nodejs环境&#34;&gt;#&lt;/a&gt; 首先安装 node.js 环境&lt;/h2&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h2 id=&#34;打开git-bash输入以下代码安装hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打开git-bash输入以下代码安装hexo&#34;&gt;#&lt;/a&gt; 打开 Git Bash，输入以下代码安装 hexo&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ npm install -g hexo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;安装完成在任意盘创建文件夹例如dhexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装完成在任意盘创建文件夹例如dhexo&#34;&gt;#&lt;/a&gt; 安装完成在任意盘创建文件夹，例如 D:\hexo&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ &lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; -g hexo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;安装完成在任意盘创建文件夹例如dhexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装完成在任意盘创建文件夹例如dhexo&#34;&gt;#&lt;/a&gt; 安装完成在任意盘创建文件夹，例如 D:\hexo&lt;/h3&gt;
 &lt;h3 id=&#34;再右击打开git-bash输入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#再右击打开git-bash输入&#34;&gt;#&lt;/a&gt; 再右击打开 Git Bash，输入&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ cd D:\hexo
-$ hexo init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;hexo会自动生成环境到这个目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo会自动生成环境到这个目录&#34;&gt;#&lt;/a&gt; hexo 会自动生成环境到这个目录&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ &lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; D:&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;hexo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo init&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;hexo会自动生成环境到这个目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo会自动生成环境到这个目录&#34;&gt;#&lt;/a&gt; hexo 会自动生成环境到这个目录&lt;/h3&gt;
 &lt;h3 id=&#34;然后继续输入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#然后继续输入&#34;&gt;#&lt;/a&gt; 然后继续输入&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ hexo g
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;会生成一个public文件夹这个文件夹就是博客生成的静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#会生成一个public文件夹这个文件夹就是博客生成的静态文件&#34;&gt;#&lt;/a&gt; 会生成一个 public 文件夹，这个文件夹就是博客生成的静态文件&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo g&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;会生成一个public文件夹这个文件夹就是博客生成的静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#会生成一个public文件夹这个文件夹就是博客生成的静态文件&#34;&gt;#&lt;/a&gt; 会生成一个 public 文件夹，这个文件夹就是博客生成的静态文件&lt;/h3&gt;
 &lt;h3 id=&#34;可直接部署到gitpage或者服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可直接部署到gitpage或者服务器&#34;&gt;#&lt;/a&gt; 可直接部署到 GitPage 或者服务器&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ hexo s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;进入浏览器输入localhost4000即可访问你的网站ctrlc停止预览&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#进入浏览器输入localhost4000即可访问你的网站ctrlc停止预览&#34;&gt;#&lt;/a&gt; 进入浏览器输入&lt;span class=&#34;exturl&#34; data-url=&#34;bG9jYWxob3N0OjQwMDA=&#34;&gt; localhost:4000&lt;/span&gt; 即可访问你的网站，Ctrl+C 停止预览&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;进入浏览器输入localhost4000即可访问你的网站ctrlc停止预览&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#进入浏览器输入localhost4000即可访问你的网站ctrlc停止预览&#34;&gt;#&lt;/a&gt; 进入浏览器输入&lt;span class=&#34;exturl&#34; data-url=&#34;bG9jYWxob3N0OjQwMDA=&#34;&gt; localhost:4000&lt;/span&gt; 即可访问你的网站，Ctrl+C 停止预览&lt;/h3&gt;
 &lt;h3 id=&#34;在hexo官网下载一个主题然后放进hexo文件夹下面的theme文件夹里面&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在hexo官网下载一个主题然后放进hexo文件夹下面的theme文件夹里面&#34;&gt;#&lt;/a&gt; 在 Hexo 官网下载一个主题然后放进 hexo 文件夹下面的 theme 文件夹里面&lt;/h3&gt;
 &lt;h3 id=&#34;修改hexo文件夹中根目录_configyml文件里面的theme属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改hexo文件夹中根目录_configyml文件里面的theme属性&#34;&gt;#&lt;/a&gt; 修改 hexo 文件夹中根目录_config.yml 文件里面的 theme 属性&lt;/h3&gt;
 &lt;h3 id=&#34;将原来的theme属性改为你所下载主题的文件夹名打开git-bash重新生成并预览&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#将原来的theme属性改为你所下载主题的文件夹名打开git-bash重新生成并预览&#34;&gt;#&lt;/a&gt; 将原来的 theme 属性改为你所下载主题的文件夹名，打开 Git Bash 重新生成并预览&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ hexo g
-$ hexo s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;你会发现页面已经适应了你的主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#你会发现页面已经适应了你的主题&#34;&gt;#&lt;/a&gt; 你会发现页面已经适应了你的主题&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo g&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;你会发现页面已经适应了你的主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#你会发现页面已经适应了你的主题&#34;&gt;#&lt;/a&gt; 你会发现页面已经适应了你的主题&lt;/h3&gt;
 &lt;h3 id=&#34;接下来就开启了你的魔改主题之路&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#接下来就开启了你的魔改主题之路&#34;&gt;#&lt;/a&gt; 接下来就开启了你的魔改主题之路&lt;/h3&gt;
 </content>
         <category term="技术" />

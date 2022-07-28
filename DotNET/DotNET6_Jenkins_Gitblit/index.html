@@ -1,0 +1,470 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Tianciの小窝" href="https://blog.lovetianci.cn/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Tianciの小窝" href="https://blog.lovetianci.cn/atom.xml" />
+<link rel="alternate" type="application/json" title="Tianciの小窝" href="https://blog.lovetianci.cn/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="技术" />
+
+
+<link rel="canonical" href="https://blog.lovetianci.cn/DotNET/DotNET6_Jenkins_Gitblit/">
+
+
+
+  <title>
+DotNET6集成Jenkins+GitBlit部署到IIS - DotNET |
+Tianciの小窝</title>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">DotNET6集成Jenkins+GitBlit部署到IIS
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-07-11 15:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-07-11T15:00:00+00:00">2022-07-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>955</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Tianciの小窝</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/DotNET/" itemprop="item" rel="index" title="分类于 DotNET"><span itemprop="name">DotNET</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://blog.lovetianci.cn/DotNET/DotNET6_Jenkins_Gitblit/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/tianci.jpg">
+    <meta itemprop="name" content="Tianci">
+    <meta itemprop="description" content="他说你任何为人称道的美丽不及他第一次遇见你, 一身清贫怎敢入繁华<br>两袖清风岂能误佳人">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Tianciの小窝">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="通过jenkins和gitblit联合完成半自动化部署"><a class="markdownIt-Anchor" href="#通过jenkins和gitblit联合完成半自动化部署">#</a> 通过 Jenkins 和 GitBlit 联合完成半自动化部署</h3>
+<a id="more"></a>
+<h3 id="服务器需要安装相应的环境"><a class="markdownIt-Anchor" href="#服务器需要安装相应的环境">#</a> 服务器需要安装相应的环境</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dpdC1mb3Itd2luZG93cy9naXQvcmVsZWFzZXMvZG93bmxvYWQvdjIuMzcuMC53aW5kb3dzLjEvR2l0LTIuMzcuMC02NC1iaXQuZXhl">Git 环境</span><br>
+<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC52aXN1YWxzdHVkaW8ubWljcm9zb2Z0LmNvbS9kb3dubG9hZC9wci8wZDAwMGQxYi04OWE0LTQ1OTMtOTcwOC1lYjUxNzc3NzdjNjQvY2ZiM2Q3NDQ0N2FjNzhkZWZiMWI2NmZkOWIzZjM4ZTAvZG90bmV0LWhvc3RpbmctNi4wLjYtd2luLmV4ZQ=="> DotNET6 运行时环境</span><br>
+<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC52aXN1YWxzdHVkaW8ubWljcm9zb2Z0LmNvbS9kb3dubG9hZC9wci8xNWFiNzcyZC1jZTVjLTQ2ZTUtYTkwZS01N2RmMTFhZGFiZmIvNGIxYjEzMzBiNjI3OWE1MGMzOThmOTRjZjcxNmM3MWUvZG90bmV0LXNkay02LjAuMzAxLXdpbi14NjQuZXhl"> DotNET6 编译环境 SDK</span><br>
+<span class="exturl" data-url="aHR0cHM6Ly9yZXBvLmh1YXdlaWNsb3VkLmNvbS9qYXZhL2pkay8xMS4wLjIrOS9qZGstMTEuMC4yX3dpbmRvd3MteDY0X2Jpbi5leGU=">JDK11</span><br>
+<span class="exturl" data-url="aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuL2plbmtpbnMvd2luZG93cy8yLjM1OC9qZW5raW5zLm1zaQ==">Jenkins 安装包</span></p>
+<h3 id="首先打开教程安装gitblit并配置java环境"><a class="markdownIt-Anchor" href="#首先打开教程安装gitblit并配置java环境">#</a> 首先打开教程<span class="exturl" data-url="aHR0cHM6Ly9sb3ZldGlhbmNpLmNuL090aGVyL0dpdEJsaXRfV2luZG93czEwLw==">安装 GitBlit</span> 并配置 Java 环境</h3>
+<h3 id="安装dotnet6运行时环境和sdk并安装git"><a class="markdownIt-Anchor" href="#安装dotnet6运行时环境和sdk并安装git">#</a> 安装 DotNET6 运行时环境和 SDK，并安装 Git</h3>
+<h3 id="通过官方安装jenkins流程进行安装"><a class="markdownIt-Anchor" href="#通过官方安装jenkins流程进行安装">#</a> 通过官方<span class="exturl" data-url="aHR0cHM6Ly93d3cuamVua2lucy5pby9kb2MvYm9vay9pbnN0YWxsaW5nL3dpbmRvd3Mv">安装 Jenkins</span> 流程进行安装</h3>
+<h3 id="所有环境搭建完毕访问所配置的端口进入jenkins安装系统推荐插件进入系统并修改管理员密码"><a class="markdownIt-Anchor" href="#所有环境搭建完毕访问所配置的端口进入jenkins安装系统推荐插件进入系统并修改管理员密码">#</a> 所有环境搭建完毕访问所配置的端口进入 Jenkins 安装系统推荐插件，进入系统并修改管理员密码</h3>
+<h3 id="新建项目选择freestyle-project"><a class="markdownIt-Anchor" href="#新建项目选择freestyle-project">#</a> 新建项目，选择 Freestyle project</h3>
+<p><img data-src="CreateProject.png" alt="创建项目"></p>
+<h3 id="选择源码管理git输入git仓库地址并设置分支"><a class="markdownIt-Anchor" href="#选择源码管理git输入git仓库地址并设置分支">#</a> 选择源码管理 Git 输入 Git 仓库地址并设置分支</h3>
+<h3 id="因为gitblit和jenkins都是在同一服务器所以我用私网ip"><a class="markdownIt-Anchor" href="#因为gitblit和jenkins都是在同一服务器所以我用私网ip">#</a> 因为 GitBlit 和 Jenkins 都是在同一服务器所以我用私网 IP</h3>
+<p><img data-src="GitSetting.png" alt="仓库地址及分支"></p>
+<h3 id="创建credentials也就是git用户信息不然无法拉取代码只需要填写账号和密码"><a class="markdownIt-Anchor" href="#创建credentials也就是git用户信息不然无法拉取代码只需要填写账号和密码">#</a> 创建 Credentials 也就是 Git 用户信息不然无法拉取代码（只需要填写账号和密码）</h3>
+<p><img data-src="UserSetting.png" alt="Git用户信息配置"></p>
+<h3 id="拉到倒数第二个构建选择执行windows-cmd命令"><a class="markdownIt-Anchor" href="#拉到倒数第二个构建选择执行windows-cmd命令">#</a> 拉到倒数第二个构建，选择执行 Windows cmd 命令</h3>
+<p><img data-src="cmd.png" alt="执行脚本命令"></p>
+<h3 id="输入以下命令"><a class="markdownIt-Anchor" href="#输入以下命令">#</a> 输入以下命令</h3>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre>dotnet restore --还原</pre></td></tr><tr><td data-num="2"></td><td><pre>dotnet build --编译</pre></td></tr><tr><td data-num="3"></td><td><pre>C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>inetsrv<span class="token punctuation">\</span>appcmd.exe stop site <span class="token string">"DotNET6API"</span> --停止IIS中的指定网站</pre></td></tr><tr><td data-num="4"></td><td><pre>C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>inetsrv<span class="token punctuation">\</span>appcmd.exe stop apppool /apppool.name:<span class="token string">"DotNET6API"</span> --停止IIS中的指定应用程序池</pre></td></tr><tr><td data-num="5"></td><td><pre>dotnet publish -o <span class="token string">"C:\WebFile\DotNET6API"</span> --将编译文件发布到指定目录下</pre></td></tr><tr><td data-num="6"></td><td><pre>C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>inetsrv<span class="token punctuation">\</span>appcmd.exe start site <span class="token string">"DotNET6API"</span> --启动IIS中的指定网站</pre></td></tr><tr><td data-num="7"></td><td><pre>C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>inetsrv<span class="token punctuation">\</span>appcmd.exe start apppool /apppool.name:<span class="token string">"DotNET6API"</span> --启动IIS中的指定应用程序池</pre></td></tr></table></figure><h3 id="配置完成点击构建即可看到完成状态"><a class="markdownIt-Anchor" href="#配置完成点击构建即可看到完成状态">#</a> 配置完成点击构建即可看到完成状态</h3>
+<p><img data-src="BuildSuccess.png" alt="构建项目"></p>
+<h3 id="注意事项如果git报错failed-to-connect-to-repository-error-performing-command-gitexe-ls-remote-h-xxxxxxx-head"><a class="markdownIt-Anchor" href="#注意事项如果git报错failed-to-connect-to-repository-error-performing-command-gitexe-ls-remote-h-xxxxxxx-head">#</a> 注意事项（如果 Git 报错：Failed to connect to repository : Error performing command: git.exe ls-remote -h xxxxxxx HEAD）</h3>
+<h3 id="说明gitexe找不到对应地址需要将git绝对路径进行修改输入服务器git安装地址默认在c盘program-files文件夹下"><a class="markdownIt-Anchor" href="#说明gitexe找不到对应地址需要将git绝对路径进行修改输入服务器git安装地址默认在c盘program-files文件夹下">#</a> 说明 Git.exe 找不到对应地址，需要将 Git 绝对路径进行修改（输入服务器 Git 安装地址默认在 C 盘 Program Files 文件夹下）</h3>
+<p><img data-src="GitUrl1.png" alt="Git地址配置"><br>
+<img data-src="GitUrl2.png" alt="Git地址配置"></p>
+
+      <div class="tags">
+          <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"><i class="ic i-tag"></i> 技术</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-07-28 14:35:10" itemprop="dateModified" datetime="2022-07-28T14:35:10+00:00">2022-07-28</time>
+  </span>
+  <span id="DotNET/DotNET6_Jenkins_Gitblit/" class="item leancloud_visitors" data-flag-title="DotNET6集成Jenkins+GitBlit部署到IIS" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝茶~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Tianci 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.jpg" alt="Tianci 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Tianci <i class="ic i-at"><em>@</em></i>Tianciの小窝
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.lovetianci.cn/DotNET/DotNET6_Jenkins_Gitblit/" title="DotNET6集成Jenkins+GitBlit部署到IIS">https://blog.lovetianci.cn/DotNET/DotNET6_Jenkins_Gitblit/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/DotNET/DotNET6_IIS/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetfk5zwj20zk0m8e81.jpg" title=".NET6 部署IIS">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> DotNET</span>
+  <h3>.NET6 部署IIS</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/DotNET/DotNET6_Publish_Error/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="DotNET6发布Publish失败">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> DotNET</span>
+  <h3>DotNET6发布Publish失败</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过jenkins和gitblit联合完成半自动化部署"><span class="toc-number">1.</span> <span class="toc-text"># 通过 Jenkins 和 GitBlit 联合完成半自动化部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器需要安装相应的环境"><span class="toc-number">2.</span> <span class="toc-text"># 服务器需要安装相应的环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首先打开教程安装gitblit并配置java环境"><span class="toc-number">3.</span> <span class="toc-text"># 首先打开教程安装 GitBlit 并配置 Java 环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装dotnet6运行时环境和sdk并安装git"><span class="toc-number">4.</span> <span class="toc-text"># 安装 DotNET6 运行时环境和 SDK，并安装 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过官方安装jenkins流程进行安装"><span class="toc-number">5.</span> <span class="toc-text"># 通过官方安装 Jenkins 流程进行安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#所有环境搭建完毕访问所配置的端口进入jenkins安装系统推荐插件进入系统并修改管理员密码"><span class="toc-number">6.</span> <span class="toc-text"># 所有环境搭建完毕访问所配置的端口进入 Jenkins 安装系统推荐插件，进入系统并修改管理员密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建项目选择freestyle-project"><span class="toc-number">7.</span> <span class="toc-text"># 新建项目，选择 Freestyle project</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择源码管理git输入git仓库地址并设置分支"><span class="toc-number">8.</span> <span class="toc-text"># 选择源码管理 Git 输入 Git 仓库地址并设置分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#因为gitblit和jenkins都是在同一服务器所以我用私网ip"><span class="toc-number">9.</span> <span class="toc-text"># 因为 GitBlit 和 Jenkins 都是在同一服务器所以我用私网 IP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建credentials也就是git用户信息不然无法拉取代码只需要填写账号和密码"><span class="toc-number">10.</span> <span class="toc-text"># 创建 Credentials 也就是 Git 用户信息不然无法拉取代码（只需要填写账号和密码）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拉到倒数第二个构建选择执行windows-cmd命令"><span class="toc-number">11.</span> <span class="toc-text"># 拉到倒数第二个构建，选择执行 Windows cmd 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入以下命令"><span class="toc-number">12.</span> <span class="toc-text"># 输入以下命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置完成点击构建即可看到完成状态"><span class="toc-number">13.</span> <span class="toc-text"># 配置完成点击构建即可看到完成状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项如果git报错failed-to-connect-to-repository-error-performing-command-gitexe-ls-remote-h-xxxxxxx-head"><span class="toc-number">14.</span> <span class="toc-text"># 注意事项（如果 Git 报错：Failed to connect to repository : Error performing command: git.exe ls-remote -h xxxxxxx HEAD）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明gitexe找不到对应地址需要将git绝对路径进行修改输入服务器git安装地址默认在c盘program-files文件夹下"><span class="toc-number">15.</span> <span class="toc-text"># 说明 Git.exe 找不到对应地址，需要将 Git 绝对路径进行修改（输入服务器 Git 安装地址默认在 C 盘 Program Files 文件夹下）</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/DotNET/CSharp_Delegate/" rel="bookmark" title="C# Delegate">C# Delegate</a></li><li><a href="/DotNET/CSharp_Interview_ques_1/" rel="bookmark" title="C#常见算法题">C#常见算法题</a></li><li><a href="/DotNET/CSharp_Interview_ques_2/" rel="bookmark" title="C#理论面试题">C#理论面试题</a></li><li><a href="/DotNET/CSharp_Attribute/" rel="bookmark" title="C# Attribute">C# Attribute</a></li><li><a href="/DotNET/DotNETCore_WebAPI_EFCore_MySQL/" rel="bookmark" title=".NET Core WebAPI使用EFCore连接MySQL">.NET Core WebAPI使用EFCore连接MySQL</a></li><li><a href="/DotNET/CSharp_Read/" rel="bookmark" title="C#读取文本文件">C#读取文本文件</a></li><li><a href="/DotNET/CSharp_File/" rel="bookmark" title="C#获取指定文件夹所有文件">C#获取指定文件夹所有文件</a></li><li><a href="/DotNET/WPF_Learning_1/" rel="bookmark" title="WPF知识点">WPF知识点</a></li><li><a href="/DotNET/WPF_Learning_2/" rel="bookmark" title="WPF DataTable帮助类">WPF DataTable帮助类</a></li><li><a href="/DotNET/DotNETCore_WebAPI_Jwt/" rel="bookmark" title="学习.NET Core Jwt授权与鉴权">学习.NET Core Jwt授权与鉴权</a></li><li><a href="/DotNET/PDF_Excel/" rel="bookmark" title=".NET Core导出PDF和Excel">.NET Core导出PDF和Excel</a></li><li><a href="/DotNET/SqlSugar/" rel="bookmark" title="SqlSugar的使用日常">SqlSugar的使用日常</a></li><li><a href="/DotNET/DotNET6_WebAPI_Log4net/" rel="bookmark" title="DotNET6集成Log4Net">DotNET6集成Log4Net</a></li><li><a href="/DotNET/DotNET6_WebAPI_Exception/" rel="bookmark" title="DotNET6 WebAPI全局异常处理及拦截器">DotNET6 WebAPI全局异常处理及拦截器</a></li><li><a href="/DotNET/DotNET6_WebAPI_IOC/" rel="bookmark" title="DotNET6 自动注入到IOC容器">DotNET6 自动注入到IOC容器</a></li><li><a href="/DotNET/DotNET6_WebAPI_SqlSugar/" rel="bookmark" title="DotNET6使用SqlSugar连接数据库">DotNET6使用SqlSugar连接数据库</a></li><li><a href="/DotNET/DotNET6_IIS/" rel="bookmark" title=".NET6 部署IIS">.NET6 部署IIS</a></li><li class="active"><a href="/DotNET/DotNET6_Jenkins_Gitblit/" rel="bookmark" title="DotNET6集成Jenkins+GitBlit部署到IIS">DotNET6集成Jenkins+GitBlit部署到IIS</a></li><li><a href="/DotNET/DotNET6_Publish_Error/" rel="bookmark" title="DotNET6发布Publish失败">DotNET6发布Publish失败</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Tianci"
+      data-src="/images/tianci.jpg">
+  <p class="name" itemprop="name">Tianci</p>
+  <div class="description" itemprop="description">一身清贫怎敢入繁华<br>两袖清风岂能误佳人</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">29</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">3</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item qq" data-url="aHR0cHM6Ly93cGEucXEuY29tL21zZ3JkP3Y9MyZ1aW49MjAxNjgzODA4NyZzaXRlPTExJm1lbnU9eWVz" title="https:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2016838087&amp;site&#x3D;11&amp;menu&#x3D;yes"><i class="ic i-qq"></i></span>
+      <span class="exturl item wechat" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvMjAxNjgzODA4Ny9TYWt1cmFIZXhvRmlsZUBtYXN0ZXIvdGhlbWVzL2ltYWdlcy93ZWNoYXQuanBn" title="https:&#x2F;&#x2F;gcore.jsdelivr.net&#x2F;gh&#x2F;2016838087&#x2F;SakuraHexoFile@master&#x2F;themes&#x2F;images&#x2F;wechat.jpg"><i class="ic i-weixin"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <span class="exturl" data-url="aHR0cHM6Ly9sb3ZldGlhbmNpLmNu"><i class="ic i-heart"></i>主站</span>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/DotNET/DotNET6_IIS/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/DotNET/DotNET6_Publish_Error/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Tianci @ Tianciの小窝</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">63k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">57 分钟</span>
+  </div>
+  <div class="powered-by">
+    <span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbi8jL0ludGVncmF0ZWQvcmVjb3JkUXVlcnk=">湘ICP备19020367号-1</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'DotNET/DotNET6_Jenkins_Gitblit/',
+    favicon: {
+      show: "（●´3｀●）过来抱紧我！",
+      hide: "(´Д｀)不要离开我！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//gcore.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

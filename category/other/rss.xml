@@ -5,8 +5,8 @@
         <link>https://blog.lovetianci.cn</link>
         <description>一身清贫怎敢入繁华&lt;br&gt;两袖清风岂能误佳人</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 29 Jul 2022 18:30:00 +0000</pubDate>
-        <lastBuildDate>Fri, 29 Jul 2022 18:30:00 +0000</lastBuildDate>
+        <pubDate>Sat, 30 Jul 2022 17:00:00 +0000</pubDate>
+        <lastBuildDate>Sat, 30 Jul 2022 17:00:00 +0000</lastBuildDate>
         <category>技术</category>
         <category>面试题</category>
         <category>娱乐</category>
@@ -15,7 +15,7 @@
             <title>Linux使用Jenkins+Docker自动化部署DotNET6</title>
             <link>https://blog.lovetianci.cn/Other/DotNET6_Linux_Jenkins_Docker/</link>
             <category>技术</category>
-            <pubDate>Fri, 29 Jul 2022 18:30:00 +0000</pubDate>
+            <pubDate>Sat, 30 Jul 2022 17:00:00 +0000</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;cicd首次在linux上使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cicd首次在linux上使用&#34;&gt;#&lt;/a&gt; CI/CD 首次在 Linux 上使用&lt;/h3&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h2 id=&#34;安装jenkins&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装jenkins&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamVua2lucy5pby9kb2MvYm9vay9pbnN0YWxsaW5nL2xpbnV4Lw==&#34;&gt;安装 Jenkins&lt;/span&gt;&lt;/h2&gt;
